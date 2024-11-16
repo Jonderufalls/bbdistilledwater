@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicbic's Distilled Water</title>
+    <link rel="icon" href="img/BDW_images/water_logo.png" type="image/icon type">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/service.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="logo d-flex justify-content-center align-items-center">
+        <img src="img/BDW_images/water_logo.png" alt="">
+    </div>
+    <nav class="nav">
+        <div class="nav-center">
+            <a class="nav-link active" aria-current="page" href="index.html"><h5>Home</h5></a>
+            <a class="nav-link" href="#"><h5>Service</h5></a>
+            <a class="nav-link" href="contact.html"><h5>Contact Us</h5></a>
+            <a class="nav-link" href="https://jonderufalls.github.io/Kupal-Company/"><h5>Log Out</h5></a>
+        </div>
+        <!-- <a class="nav-link logout" href="#">Log Out</a> -->
+        <button class="menu-button" onclick="toggleSidebar()">☰</button>
+    </nav>
+    
+    <!-- Sidebar for Mobile View -->
+    <div id="sidebar" class="sidebar">
+        <a href="#" class="close-button" onclick="toggleSidebar()">x</a>
+        <a href="index.html">Home</a>
+        <a href="#">Service</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="https://jonderufalls.github.io/Kupal-Company/">Log Out</a>
+    </div>
+    
+    <br><br><br><br><br>
+    <div class="products">
+        <h2>Products & Pricing</h2>
+        <div class="product-container">
+            <!-- Water Jug -->
+            <div class="product">
+                <img src="img/BDW_images/Waterbottle.jpg" alt="Water Jug" class="product-img">
+                <div class="product-info">
+                    <h3>Water Jug</h3>
+                    <p>Price: <strong>20 pesos</strong></p>
+                    <p><em>Special Offer:</em> If you buy 5 or more, you can borrow the water jug for free and only pay for the refill!</p>
+                </div>
+            </div>
+    
+            <!-- Bottle Refills -->
+            <div class="product">
+                <img src="img/BDW_images/smallbottles.jpg" alt="Bottle Refills" class="product-img">
+                <div class="product-info" style="text-align: left;">
+                    <p style="color: transparent;">Ordering is simple! Choose the products you 
+                        need, and either fill out our online form or call us directly.</p>
+                    <h3>Bottle Refills</h3>
+                    <ul>
+                        <li>1 Jug: <strong>20 pesos</strong></li>
+                        <li>1 Gallon: <strong>10 pesos</strong></li>
+                        <li>1 Liter: <strong>5 pesos</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line" style="height: 5px;background-color: rgb(0, 0, 0);">
+
+    </div>
+    <div class="order-page" >
+        <div class="ordering-container">
+            <!-- How to Order Section (Left Side) -->
+            <div class="ordering-options"><br>
+                <h2>How to Order</h2>
+                <p style="text-indent: 30px;">Ordering is simple! Choose the products you 
+                need, and either fill out our online form or call us directly.</p>
+                <ul>
+                    <li><strong>Online:</strong> Fill out the order form to submit your request.</li>
+                    <li><strong>Phone:</strong> Call us at <strong>(0963-566-0527)</strong> to place your order.</li>
+                    <li><strong>Location: </strong>  Visit our shop at Inasuyan, Kawayan, Biliran</li>
+                </ul>
+                <button class="cta-button">
+                    <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+                </button>
+            </div>
+        
+            <!-- Buy Now Form Section (Right Side) -->
+            <div class="buy-now-container">
+                <h2 style="color: rgb(254, 254, 255);">Buy Now</h2>
+                <form id="buy-now-form">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="customer-name">Full Name:</label>
+                        <input type="text" id="customer-name" name="customer-name" placeholder="Enter your full name" required>
+                    </div>
+        
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="address">Delivery Address:</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your delivery address" required>
+                    </div>
+        
+                    <!-- Buy or Refill -->
+                    <div class="form-group">
+                        <label for="order-type">Order Type:</label>
+                        <select id="order-type" name="order-type" required>
+                            <option value="buy">Buy</option>
+                            <option value="refill">Refill</option>
+                        </select>
+                    </div>
+        
+                    <!-- Product Choice -->
+                    <div class="form-group">
+                        <label for="product-choice">Product:</label>
+                        <select id="product-choice" name="product-choice" required>
+                            <option value="jug">1 Jug</option>
+                            <option value="gallon">1 Gallon</option>
+                            <option value="liter">1 Liter</option>
+                        </select>
+                    </div>
+        
+                    <!-- Quantity -->
+                    <div class="form-group">
+                        <label for="quantity">Amount:</label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required min="1">
+                    </div>
+        
+                    <!-- Submit Button -->
+                    <button type="submit" class="cta-button">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    </div>       
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Shop Information -->
+        <div class="footer-section">
+            <h3><img src="img/BDW_images/water_logo.png" alt="Logo" style="width: 50px;">BicBic's Distilled Water</h3>
+            <p>Your trusted source for pure, clean and refreshing distilled water.</p>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>📞 Phone: +63 963 566 0527</li>
+                <li>📧 Email: bbdistilledwater.com</li>
+                <li>📍 Location: Inasuyan, Kawayan, Biliran</li>
+            </ul>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" title="Facebook">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a href="#" title="Instagram">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+                <!-- <a href="#" title="Twitter">
+                    <img src="twitter-icon.png" alt="Twitter">
+                </a> -->
+            </div><br>
+            <h6><strong>Open: </strong> 6am - 6pm Everyday</h6>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 BicBic's Distilled Water. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const topbar = document.querySelector(".nav");
+        sidebar.classList.toggle("active");
+        topbar.classList.toggle("hidden");
+    }
+
+
+
+        // Function to handle the scroll event
+    window.onscroll = function() {changeNavBackground()};
+
+    function changeNavBackground() {
+        const nav = document.querySelector('.nav');
+        if (window.scrollY > 50) {  // If the page is scrolled more than 50px
+            nav.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // Darken background
+        } else {
+            nav.style.backgroundColor = 'rgba(51, 51, 51, 0.0)'; // Original color
+        }
+    }
+</script>
+
+</html>

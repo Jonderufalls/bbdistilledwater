@@ -1,0 +1,350 @@
+body{
+    margin-top: 70px;
+    background: url(/img/underwater.jpg) no-repeat center center;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed */
+    background-position: center; /* Centers the image */
+}
+
+html ::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background-color:#004477;
+    border-radius: 5px;
+}
+
+
+.logo img{
+    margin-top: -50px;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    display: block; /* Makes the image a block element */
+    margin-left: auto;
+    margin-right: auto; /* Centers the image horizontally */
+}
+
+
+/* Basic Styling */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #33333300;
+    color: white;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-link {
+    color: rgb(0, 90, 90);
+    text-decoration: none;
+    margin-right: 20px;
+}
+.nav-link :hover{
+    color: white;
+}
+
+.logout {
+    margin-left: auto;
+}
+
+/* Hide Menu Button and Sidebar on Desktop */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #000000d2;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+    z-index: 1000; /* Ensures it's on top */
+}
+
+
+.sidebar a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.close-button {
+    font-size: 24px;
+    text-align: right;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+/* End of sidebar styling */
+
+
+/* Responsive Design for Tablet and Mobile */
+@media (max-width: 768px) {
+    .nav-center, .logout {
+        display: none; /* Hide the center links and logout link */
+    }
+
+    .menu-button {
+        display: block; /* Show menu button */
+        margin-left: auto;
+    }
+
+    .sidebar {
+        left: -250px; /* Sidebar hidden by default */
+    }
+
+    .sidebar.active {
+        left: 0; /* Show sidebar when active */
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Keeps the navbar at the top of the page */
+    z-index: 1000; /* Ensures the navbar stays above other content when scrolling */
+}
+
+@media (min-width: 769px){
+    .nav{
+        margin-left: 100px;
+        margin-right: 100px;
+        border-top: 2px solid rgb(0, 90, 90);
+        border-bottom: 2px solid rgb(0, 90, 90);
+    }
+}
+
+/* Contact Page */
+.contact-page {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+.contact-page h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.contact-page p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 769px){
+    .contact-container{}
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: left;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        max-width: 100%;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #002244; /* Dark blue for modern feel */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    text-align: left;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: #00c0a3; /* Accent color for headings */
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    margin: 0 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.social-links img {
+    width: 100%;
+    height: auto; /* Makes icons white for modern look */
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Adds hover effect */
+}
+
+.footer-bottom {
+    border-top: 1px solid #004477; /* Subtle divider */
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #bbbbbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        
+    }
+}

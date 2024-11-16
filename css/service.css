@@ -1,0 +1,485 @@
+body{
+    margin-top: 70px;
+    background: url(/img/underwater.jpg) no-repeat center center;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed */
+    background-position: center; /* Centers the image */
+}
+
+html ::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background-color:#004477;
+    border-radius: 5px;
+}
+
+.logo img{
+    margin-top: -50px;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    display: block; /* Makes the image a block element */
+    margin-left: auto;
+    margin-right: auto; /* Centers the image horizontally */
+}
+
+
+/* Basic Styling */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #33333300;
+    color: white;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-link {
+    color: rgb(0, 90, 90);
+    text-decoration: none;
+    margin-right: 20px;
+}
+.nav-link :hover{
+    color: white;
+}
+
+.logout {
+    margin-left: auto;
+}
+
+/* Hide Menu Button and Sidebar on Desktop */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #000000d2;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+    z-index: 1000; /* Ensures it's on top */
+}
+
+
+.sidebar a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.close-button {
+    font-size: 24px;
+    text-align: right;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+/* End of sidebar styling */
+
+
+/* Responsive Design for Tablet and Mobile */
+@media (max-width: 768px) {
+    .nav-center, .logout {
+        display: none; /* Hide the center links and logout link */
+    }
+
+    .menu-button {
+        display: block; /* Show menu button */
+        margin-left: auto;
+    }
+
+    .sidebar {
+        left: -250px; /* Sidebar hidden by default */
+    }
+
+    .sidebar.active {
+        left: 0; /* Show sidebar when active */
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Keeps the navbar at the top of the page */
+    z-index: 1000; /* Ensures the navbar stays above other content when scrolling */
+}
+
+@media (min-width: 769px){
+    .nav{
+        margin-left: 100px;
+        margin-right: 100px;
+        border-top: 2px solid rgb(0, 90, 90);
+        border-bottom: 2px solid rgb(0, 90, 90);
+    }
+}
+
+/* Products Section */
+.products {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #007bff;
+}
+
+@media (min-width: 769px) {
+    .products {
+        /* margin-top: 50px;
+        margin-left: 100px;
+        margin-right: 100px; */
+    }
+}
+
+.products h2 {
+    margin: 20px;
+    font-size: 2rem;
+    color: #007bff;
+}
+
+/* Flexbox Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: center;
+    gap: 20px; /* Adds space between products */
+}
+
+@media (max-width: 769px) {
+    .product-container {
+        display: block;
+        margin-bottom: 200px;
+    }
+}
+
+/* Individual Product */
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 400px;
+    flex: 1 1 300px; /* Flex items take equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.product-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-info {
+    text-align: left;
+    margin-top: 15px;
+    color: #333;
+}
+
+.product h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.product p, .product ul {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.product ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product li {
+    margin: 5px 0;
+}
+
+.product strong {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        gap: 15px;
+    }
+
+    .product {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Make the products container height adjust automatically */
+.products {
+    display: flex;
+    flex-direction: column; /* Stack the products vertically */
+    align-items: center; /* Center the products horizontally */
+}
+
+.product-container {
+    min-height: auto; /* Allow the container to adjust its height */
+}
+
+.order-page{
+    margin-top: -30px;
+    margin-bottom: -30px;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+/* Container for both sections */
+.ordering-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* How to Order Section */
+.ordering-options {
+    width: 45%;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.ordering-options h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #020202;
+}
+
+.ordering-options p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.ordering-options ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.ordering-options li {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.ordering-options button.cta-button {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ordering-options button.cta-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Buy Now Form Section */
+.buy-now-container {
+    width: 45%;
+    background-color: #6098ff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.buy-now-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.buy-now-container h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.buy-now-container .form-group {
+    margin-bottom: 15px;
+}
+
+.buy-now-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.buy-now-container input, 
+.buy-now-container select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.buy-now-container button.cta-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.buy-now-container button.cta-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.buy-now-container .contact-options button.cta-button {
+    margin-right: 10px;
+}
+
+.buy-now-container .cta-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.buy-now-container button.cta-button:focus {
+    outline: none;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .ordering-options, .buy-now-container {
+        width: 100%;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #002244; /* Dark blue for modern feel */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    text-align: left;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: #00c0a3; /* Accent color for headings */
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    margin: 0 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.social-links img {
+    width: 100%;
+    height: auto; /* Makes icons white for modern look */
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Adds hover effect */
+}
+
+.footer-bottom {
+    border-top: 1px solid #004477; /* Subtle divider */
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #bbbbbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        
+    }
+}
