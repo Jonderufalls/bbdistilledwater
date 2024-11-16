@@ -1,6 +1,6 @@
 body{
     margin-top: 70px;
-    background: url(../img/underwater.jpg) no-repeat center center;
+    background: url(../underwater.jpg) no-repeat center center;
     background-size: cover;
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Makes the background image fixed */
